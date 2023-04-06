@@ -1,7 +1,6 @@
 define("@scom/scom-trust-wallet", ["require", "exports", "@ijstech/eth-wallet", "@ijstech/components"], function (require, exports, eth_wallet_1, components_1) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
-    exports.TrustWalletProvider = void 0;
     let moduleDir = components_1.application.currentModuleDir;
     function fullPath(path) {
         if (path.indexOf('://') > 0)
@@ -26,5 +25,5 @@ define("@scom/scom-trust-wallet", ["require", "exports", "@ijstech/eth-wallet", 
             return !!ethereum && !!ethereum.isTrust;
         }
     }
-    exports.TrustWalletProvider = TrustWalletProvider;
+    exports.default = TrustWalletProvider;
 });
